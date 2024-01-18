@@ -8,11 +8,12 @@ if __name__ == "__main__":
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
     elif len(sys.argv) == 4:
-        if not sys.argv[3] in operators:
+        if not sys.argv[2] in operators:
             print("Unknown operator. Available operators: +, -, * and /")
-            exit(1)
+            sys.exit(1)
     funcs = {"+": add, "-": sub, "*": mul, "/": div}
     a = int(sys.argv[1])
     b = int(sys.argv[3])
     opp = sys.argv[2]
     res = funcs[opp](a, b)
+    print("{} {} {} = {}".format(a, opp, b, res))
