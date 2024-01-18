@@ -5,4 +5,4 @@ if __name__ == "__main__":
     names = [n for n in module_names if not n.startswith('__')]
     names.sort()
     for i in names:
-        print("{}".format(names[i]))
+        print(i)
