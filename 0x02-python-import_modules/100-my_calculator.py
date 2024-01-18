@@ -7,7 +7,7 @@ if __name__ == "__main__":
     if not len(sys.argv) == 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
-    elif len(sys.argv == 4):
+    elif len(sys.argv) == 4:
         if not sys.argv[3] in operators:
             print("Unknown operator. Available operators: +, -, * and /")
             exit(1)
