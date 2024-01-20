@@ -5,6 +5,8 @@ def print_matrix_integer(matrix=[[]]):
             print("{:s}".format(""))
         else:
             for lis in matrix:
-                for lis2 in lis:
-                    print("{:d}".format(lis2), end=" ")
-                print('')
+                for lis2 in range(0, len(lis)):
+                    if lis2 < len(lis) - 1:
+                        print("{:d}".format(lis[lis2]), end=" ")
+                    else:
+                        print("{:d}".format(lis[lis2]))
