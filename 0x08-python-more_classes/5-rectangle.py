@@ -8,6 +8,25 @@ class Rectangle:
         self.height = height
         self.width = width
 
+    def __str__(self):
+        """ __str__ """
+        str = ""
+        for i in range(self.__height):
+            for j in range(self.__width):
+                str += "#"
+            if i != self.__height - 1:
+                str += "\n"
+        return str
+
+    def __repr__(self):
+        """ __repr__ """
+        return f"Rectangle({self.__width}, {self.__height})"
+
+    def __del__(self):
+        """ __del__ """
+        """prints a string when an instance has been deleted"""
+        print("Bye rectangle...")
+
     @property
     def width(self):
         """ get width """
@@ -39,3 +58,14 @@ class Rectangle:
                 raise ValueError("height must be >= 0")
             else:
                 self.__height = value
+
+    def area(self):
+        """ Area """
+        return self.__height * self.__width
+
+    def perimeter(self):
+        """ permiter """
+        if self.__height == 0 or self.__width == 0:
+            return 0
+        else:
+            return 2 * (self.__height + self.__width)

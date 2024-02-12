@@ -3,10 +3,35 @@
 
 
 class Rectangle:
+    """ public intance variable number_of_instances (int) """
     """ A class that should define a redctangle """
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
+        """ __init__ """
         self.height = height
         self.width = width
+        Rectangle.number_of_instances += 1
+
+    def __str__(self):
+        """ __str__ """
+        str = ""
+        for i in range(self.__height):
+            for j in range(self.__width):
+                str += "#"
+            if i != self.__height - 1:
+                str += "\n"
+        return str
+
+    def __repr__(self):
+        """ repr """
+        return f"Rectangle({self.__width}, {self.__height})"
+
+    def __del__(self):
+        """prints a string when an instance has been deleted"""
+        print("Bye rectangle...")
+        if Rectangle.number_of_instances > 0:
+            Rectangle.number_of_instances -= 1
 
     @property
     def width(self):
@@ -39,3 +64,14 @@ class Rectangle:
                 raise ValueError("height must be >= 0")
             else:
                 self.__height = value
+
+    def area(self):
+        """ Area """
+        return self.__height * self.__width
+
+    def perimeter(self):
+        """ permiter """
+        if self.__height == 0 or self.__width == 0:
+            return 0
+        else:
+            return 2 * (self.__height + self.__width)
