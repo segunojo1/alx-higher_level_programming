@@ -5,5 +5,5 @@ Contains the class BaseGeometry
 
 
 class BaseGeometry:
-    """An empty class"""
+    """An empty class basegeometry"""
     pass
