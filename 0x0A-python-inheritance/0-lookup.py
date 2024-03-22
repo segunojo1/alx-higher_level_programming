@@ -3,5 +3,5 @@
 
 
 def lookup(obj):
-    """ function to print ojbj deatils"""
+    """ function that prints the attributes and everything in the object"""
     return dir(obj)

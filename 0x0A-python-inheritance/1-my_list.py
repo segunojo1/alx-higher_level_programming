@@ -3,12 +3,12 @@
 
 
 class MyList(list):
-    """ class to print list """
+    """mylist class"""
 
     def __init__(self):
-        """ function  __init__  """
+        """initialization of mylist"""
         super().__init__(self)
 
     def print_sorted(self):
-        """ function print_sorted """
+        """prints the sorted list"""
         print(sorted(self))
