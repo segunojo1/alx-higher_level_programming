@@ -11,4 +11,4 @@ class Student:
 
     def to_json(self):
         """returs dicc rep of self"""
-        json.dumps(self)
+        self.__dict__
