@@ -1,10 +1,10 @@
-"""Inherit Base"""
+"""Inherit Base modellllllllllllllllll"""
 
 from models.base import Base
 
 
 class Rectangle(Base):
-    """rectangel class"""
+    """rectangel class for the base"""
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
         self.width = width
