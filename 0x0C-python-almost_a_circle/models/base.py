@@ -1,8 +1,9 @@
-"""Base class"""
+"""Base class model for the rest of the project"""
 class Base:
-    """class instance"""
+    """class instanc of the basee"""
     __nb_objects = 0
         def __init__(self, id=None):
+            """initialization of the base class"""
             if id is not None:
                 self.id = id
             else:
