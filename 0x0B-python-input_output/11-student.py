@@ -20,3 +20,8 @@ class Student:
             if attr in self.__dict__.keys():
                 lilac[attr] = self.__dict__[attr]
         return (lilac)
+
+    def reload_from_json(self, json):
+        """Replaces all attribute values of an instance"""
+        for (key, value) in json.items():
+            setattr(self, key, value)
