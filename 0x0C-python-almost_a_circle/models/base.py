@@ -2,12 +2,19 @@
 # base.py
 """Base class model for the rest of the project"""
 class Base:
-    """class instance of the basee"""
+    """Represent the base model.
+    Represents the "base" for all other classes in project 0x0C*.
+    Attributes:
+        __nb_objects (int): The number of instantiated Bases.
+    """
     __nb_objects = 0
-    def __init__(self, id=None):
-        """initialization of the base class"""
-        if id is not None:
+   def __init__(self, id=None):
+        """Initialize a new Base.
+        Args:
+            id (int): The identity of the new Base.
+        """
+        if id:
             self.id = id
         else:
-            __nb_objects = __nb_objects + 1
-            self.id = __nb_objects
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
