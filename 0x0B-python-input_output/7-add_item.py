@@ -14,3 +14,4 @@ if __name__ == "__main__":
     argList = sys.argv[1:]
     lilac.extend(argList)
     save_to_json_file(lilac, "add_item.json")
+
