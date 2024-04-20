@@ -32,7 +32,6 @@ class Base:
         Args:
             list_dictionaries (list): A list of dictionaries.
         """
-        
         return json.dumps(list_dictionaries)
 
     @classmethod
@@ -119,7 +118,7 @@ class Base:
             If the file does not exist - an empty list.
             Otherwise - a list of instantiated classes.
         """
-        filename =f"{cls.__name__}.csv"
+        filename = f"{cls.__name__}.csv"
         try:
             with open(filename, "r", newline="") as csvfile:
                 if cls.__name__ == "Rectangle":
