@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const {argv} = require('node:process');
+const { argv } = require('node:process');
 
 if (Number.isInteger(Number(argv[2]))) {
   const x = argv[2].parseInt();
