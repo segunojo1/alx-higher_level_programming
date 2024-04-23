@@ -2,7 +2,7 @@
 const { argv } = require('node:process');
 
 if (Number.isInteger(Number(argv[2]))) {
-  const x = argv[2].parseInt();
+  const x = parseInt(argv[2]);
   for (let i = 0; i < x; i++) {
     console.log('C is fun');
   }
