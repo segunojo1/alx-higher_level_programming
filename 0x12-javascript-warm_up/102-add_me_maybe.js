@@ -1,5 +1,6 @@
 #!/usr/bin/node
 const addMeMaybe = (x, callback) => {
-  callback(++x);
+  const increment = ++x;
+  callback(increment);
 };
 module.exports = { addMeMaybe };
