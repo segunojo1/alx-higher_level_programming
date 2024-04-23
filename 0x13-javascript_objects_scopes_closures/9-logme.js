@@ -6,5 +6,5 @@ exports.logMe = function (item) {
 };
 
 function myFunction (count, item) {
-  console.log(count, ': ', item);
+  console.log(count + ': ' + item);
 }
