@@ -4,5 +4,6 @@ console.log(list.list);
 const newList = [];
 list.list.map((item, index) => {
   newList.push(item * index);
+  return newList;
 });
 console.log(newList);
