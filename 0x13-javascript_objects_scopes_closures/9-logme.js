@@ -1,5 +1,5 @@
 #!/usr/bin/node
-let counter = 0;
+let counter = -1;
 exports.logMe = function (item) {
   counter++;
   myFunction(counter, item);
